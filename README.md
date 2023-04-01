@@ -1,1 +1,2 @@
 # housing-usa
+For this project I wanted to explore housing prices across the United States because I wanted to see what kind of housing people can buy and at what prices. I was interested in this project because I wanted to find housing for myself next year and I wanted to see if there were trends across the country that could help me find some ideas on what to look for. I got the data from <a href = 'https://www.kaggle.com/datasets/austinreese/usa-housing-listings?resource=download'> here</a>.
