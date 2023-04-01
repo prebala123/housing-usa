@@ -1,0 +1,210 @@
+
+<html>  
+<head>  
+<script type="text/javascript" src="app.js">
+    </script>  
+<link rel="stylesheet" href="styles.css">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+</head>
+<body onload=assignment8()> 
+<div class="center_plot">
+<h1> Housing Prices Across America</h1>
+</div>
+
+<div>
+For this project I wanted to explore housing prices across the United States because I wanted to see what kind of housing people can buy and at what prices. 
+I was interested in this project because I wanted to find housing for myself next year and I wanted to see if there were trends across the country that could 
+help me find some ideas on what to look for. I got the data from <a href = 'https://www.kaggle.com/datasets/austinreese/usa-housing-listings?resource=download'> here </a>.
+<br> <br>
+</div>
+
+<div>
+I cleaned up the data using python because there were string columns with commas and other characters that were hard to deal with. I deleted these columns because I didn't
+need them and imported the rest of the data into Javascript with D3. The data has the following columns: ['id', 'price', 'type', 'sqfeet', 
+'beds',  'baths', 'cats_allowed', 'dogs_allowed', 'smoking_allowed',
+'wheelchair_access', 'electric_vehicle_charge', 'comes_furnished',
+'laundry_options', 'parking_options', 'lat',
+'long', 'state']
+
+<br> <br>
+</div>
+
+<div>
+I created this scatterplot of prices and square feet of houses to present information on the correlation between the two attributes. 
+Viewers can explore the data and identify trends between price and size of houses. 
+
+</div>
+
+<div>
+
+<div id="q1">
+
+    </div>
+    <div id="plot1" class="center_plot">
+    </div><br>
+</div>    
+</div>
+
+<div>
+This plot shows a mostly positive correlation between house size and price, showing that the price grows at a similar rate to the square feet of the house. If people want
+to invest in a bigger house for themselves, they will have to pay a lot more money than for a smaller house.
+<br> <br>
+For this plot, I chose not to have a multicolored scheme and made every point green because I did not want to encode any information to the points other 
+than price and square feet. I also thought green was appropriate to show the color of money.
+
+The marks for this scatter plot are points with the channels of horizontal and vertical positions.
+<br> <br>
+</div>
+
+<div>
+I created this bar chart to present information about the states that are the most friendly to electric cars because some people might be 
+interested in charging their car at home. Users can locate the state they want to live in and find the percentage of houses with chargers 
+as well as compare it to other states.
+
+</div>
+
+<div>
+
+<div id="q2">
+
+    </div>
+    <div id="plot2" class="center_plot">
+	<div id="plot21" class="center_plot">
+    </div><br>
+</div>    
+</div>
+
+<div>
+This plot shows that California is the state with the highest percent of electric vehicle chargers, followed by Vermont and New York. People who are environmentally
+conscious and want to reduce emissions should consider living in these states for their convenience.
+<br> <br>
+For this plot, I do not have a color scheme because the bars are only supposed to encode the percent of houses in that state which have electric vehicle chargers. 
+I colored the bars green to represent the idea of electric cars being green vehicles.
+
+The marks for this bar chart are lines for the bars with channels of horizontal and vertical positions.
+<br> <br>
+</div>
+
+<div>
+I created this stacked bar chart to present what types of houses have more rooms than others for people with different sized families. 
+Users can locate the amount of rooms they want to have in their house and identify what is the best fit for their family.
+
+</div>
+
+<div>
+
+
+<div id="q3">
+
+    </div>
+    <div id="plot3" class="center_plot">
+    </div><br>
+	
+<div id="radio_plot3" class="center_plot">
+        <input type="radio" id="q3_All" name="rooms" value="total" checked="checked">
+        <label for="All">All Rooms</label>
+        <input type="radio" id="q3_Bed" name="rooms" value="beds">
+        <label for="Baths">Bathrooms</label>
+        <input type="radio" id="q3_Bath" name="rooms" value="baths">
+        <label for="Beds">Bedrooms</label>
+</div>
+</div>    
+<div>
+<div class = "center_plot"> Sort bars by </div>
+
+<br> <br>
+This plot shows that houses are the biggest type of living spaces while in-laws are the smallest. People with larger families should consider living in houses or townhouses
+because they have the most bedrooms and are more accomodating for more people.
+<br> <br>
+For this plot I made a color scheme for the stacked bar chart to show the contribution of each type of room to the total number of rooms. 
+I colored the bedrooms orange and the bathrooms blue because having different colors is a good identifier for categories.
+
+The marks for this stacked bar chart are lines for the bars with channels of horizontal and vertical positions. The lines also have color hue for the room type.
+<br> <br>
+</div>
+
+<div>
+I created this map of the United States to present the price distribution for houses around the country so people can find specific states and areas 
+in states with good prices. Users can explore the map and compare the price distributions across areas to find the best price range for them.
+
+</div>
+
+<div>
+
+
+<div id="q4">
+
+    </div>
+    <div id="plot4" class="center_plot">
+    </div><br>
+
+<div id="radio_plot4" class="center_plot">
+		<input type="radio" id="q3_Off" name="impose" value="off"  checked="checked">
+        <label for="Off">Color Map Off</label>
+        <input type="radio" id="q3_On" name="impose" value="on">
+        <label for="On">Color Map On</label>
+        
+</div>
+<div id="radio2_plot4" class="center_plot">
+		<input type="radio" id="q32_Off" name="impose2" value="off">
+        <label for="Off">Houses Off</label>
+        <input type="radio" id="q32_On" name="impose2" value="on" checked="checked">
+        <label for="On">Houses On</label>
+        
+</div> 	 	
+</div>  
+
+<div>  
+<br> <br>
+This plot shows that more expensive houses are on the east and west coasts while states in the middle are cheaper. Although there are advantages to living near the coast like
+beaches or other landscapes, it can save a lot of money to live in the midwest or similar areas.
+<br> <br>
+For this plot I made a color scheme for the individual house points to show which areas have more expensive houses. 
+The points have a red and purple color scheme because it is easy to see the light and dark colors. There is also a color 
+scheme for the states to show how expensive it is to live in a state. I chose a blue scale because it was a darker color and 
+easier to see in the background of the purples.
+
+The marks for this map are points and areas to represent the individual locations and the states overall. The channels color saturation, horizontal position, 
+and vertical position are used to encode the points and states with the price of that area.
+<br> <br>
+
+</div>
+
+<div> 
+I created this box plot to present information about the cost of having pet preferences for people who are interested in taking care of pets. 
+Users can look up the price range for their preferences for dogs and cats while comparing it to other pets to get the price range they want.
+
+</div>
+
+<div>
+
+<div id="q5">
+
+    </div>
+    <div id="plot5" class="center_plot">
+    </div><br>
+</div>    
+
+<div>
+This plot shows that in general having a pet does not increase monthly rent by a lot. However living in an area that only allows dogs and not cats can cost more than 
+living in mixed areas so dog owners should consider living with people with cats in order to save money.
+<br> <br>
+For this plot I chose not to have a multicolored scheme because I did not need to represent anything except for the distribution of 
+prices for types of pets. I colored the boxes light blue because it was a light color and easy to see.
+
+The marks for this plot are lines to show the spread of prices. The channels are horizontal and vertical positions to 
+represent the median of each house type. There is also a length channel to show the spread of prices from the median.
+<br> <br>
+</div>
+
+<div>
+Overall I believe this project has been very useful in showing the many variations in houses across the United States from different sizes, vehicle support and pet allowances. 
+I hope other people can use the visualizations I have made here to make a more informed decision on the type of house they want to buy in the future.
+<br> <br>
+</div>
+   
+    
+   
+</body>  
+</html>  
